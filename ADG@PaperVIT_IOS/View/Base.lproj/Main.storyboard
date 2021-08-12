@@ -97,6 +97,22 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
         </scene>
+        <!--About Us-->
+        <scene sceneID="ZC7-2r-ygc">
+            <objects>
+                <viewController id="CVD-RT-OGv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8W5-mp-3Zu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9sr-3e-cTp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Us" id="wFu-3I-buw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRs-Y1-HhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4057" y="-1422"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="p58-bn-RRN">
             <objects>
@@ -165,6 +181,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="18d-mv-CXW">
                                                     <rect key="frame" x="295" y="17" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.32941177490000001" green="0.18823529780000001" blue="0.84705877299999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="toggleSwitch:" destination="QNe-s0-yWH" eventType="valueChanged" id="NOg-9w-uwV"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -180,6 +199,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="hapticToggle" destination="18d-mv-CXW" id="y28-si-8HI"/>
                                             <outlet property="imageIcon" destination="fgO-Uw-i0v" id="Ry1-c5-fYh"/>
                                             <outlet property="settingNameLabel" destination="w4M-gU-dRI" id="2Qb-gj-n37"/>
                                         </connections>
@@ -203,11 +223,44 @@
                     <navigationItem key="navigationItem" title="Settings" id="0RW-Gk-SFO"/>
                     <connections>
                         <outlet property="settingsTableView" destination="a2k-uA-fFs" id="KoJ-bz-gnO"/>
+                        <segue destination="fOn-c7-6J7" kind="show" identifier="privacy" id="LJu-oB-gVa"/>
+                        <segue destination="CVD-RT-OGv" kind="show" identifier="aboutUs" id="MCu-A9-Tk9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjB-CO-VCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3518" y="-706"/>
+            <point key="canvasLocation" x="3356" y="-706"/>
+        </scene>
+        <!--Privacy-->
+        <scene sceneID="SqA-5y-SQ3">
+            <objects>
+                <viewController id="fOn-c7-6J7" customClass="PrivacyViewController" customModule="ADG_PaperVIT_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4bx-oX-US7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCA-LD-lAD">
+                                <rect key="frame" x="0.0" y="140" width="375" height="638"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bTz-Uo-JBj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nCA-LD-lAD" firstAttribute="leading" secondItem="bTz-Uo-JBj" secondAttribute="leading" id="FzQ-9G-QTW"/>
+                            <constraint firstItem="nCA-LD-lAD" firstAttribute="top" secondItem="bTz-Uo-JBj" secondAttribute="top" id="PWP-x2-AsV"/>
+                            <constraint firstItem="nCA-LD-lAD" firstAttribute="trailing" secondItem="bTz-Uo-JBj" secondAttribute="trailing" id="aDY-Bv-Kal"/>
+                            <constraint firstItem="nCA-LD-lAD" firstAttribute="bottom" secondItem="bTz-Uo-JBj" secondAttribute="bottom" id="mIC-QW-R2C"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Privacy" largeTitleDisplayMode="always" id="YA2-VP-l06"/>
+                    <connections>
+                        <outlet property="webView" destination="nCA-LD-lAD" id="DmD-Zd-Q4T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1XK-tb-OG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4317.6000000000004" y="-706.4039408866995"/>
         </scene>
         <!--Exams-->
         <scene sceneID="bcg-MW-qF4">

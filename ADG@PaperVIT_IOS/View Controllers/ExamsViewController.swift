@@ -11,6 +11,7 @@ class ExamsViewController: UIViewController {
 
     @IBOutlet weak var examTableView: UITableView!
     @IBOutlet weak var uploadPaperButton: UIButton!
+    let defaults = UserDefaults.standard
     
     struct Exam {
         var ExamTitle : String
@@ -31,14 +32,14 @@ class ExamsViewController: UIViewController {
         super.viewDidLoad()
         examTableView.dataSource = self
         examTableView.delegate = self
-        
+        settingHapticStateValue()
 
         // Do any additional setup after loading the view.
     }
     
 
     @IBAction func didTapUploadPaper(_ sender: Any) {
-        
+        hapticFeedback.hapticTouch.haptiFeedbackSucess()
     }
     
 }
@@ -67,4 +68,13 @@ extension ExamsViewController : UITableViewDelegate {
         performSegue(withIdentifier: "toSubjectsPage", sender: self)
     }
     
+}
+
+
+extension ExamsViewController {
+    func settingHapticStateValue() {
+        if defaults.object(forKey: key.values.hapticState) == nil {
+            defaults.setValue(false, forKey: key.values.hapticState)
+        }
+    }
 }
