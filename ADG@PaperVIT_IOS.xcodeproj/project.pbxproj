@@ -12,6 +12,7 @@
 		0B32AA6F26C52E1600E0E404 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B32AA6E26C52E1600E0E404 /* HapticFeedback.swift */; };
 		0B32AA7126C52E3100E0E404 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B32AA7026C52E3100E0E404 /* Constants.swift */; };
 		0B32AA7326C546FB00E0E404 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B32AA7226C546FB00E0E404 /* PrivacyViewController.swift */; };
+		0B6F5D9B26CBEFB6006586D4 /* HapticSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F5D9A26CBEFB6006586D4 /* HapticSettingCell.swift */; };
 		1D5AB69526C2958400B62D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AB69426C2958400B62D5A /* AppDelegate.swift */; };
 		1D5AB69726C2958400B62D5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AB69626C2958400B62D5A /* SceneDelegate.swift */; };
 		1D5AB69926C2958400B62D5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AB69826C2958400B62D5A /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		0B32AA6E26C52E1600E0E404 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 		0B32AA7026C52E3100E0E404 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0B32AA7226C546FB00E0E404 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		0B6F5D9A26CBEFB6006586D4 /* HapticSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticSettingCell.swift; sourceTree = "<group>"; };
 		1D5AB69126C2958400B62D5A /* ADG@PaperVIT_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADG@PaperVIT_IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5AB69426C2958400B62D5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D5AB69626C2958400B62D5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				0B16EA5526C3D6AD00DC1C91 /* settingsCell.swift */,
+				0B6F5D9A26CBEFB6006586D4 /* HapticSettingCell.swift */,
 			);
 			path = SettingsViewController;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				1D6BE9A326C2F16C00F44114 /* UploadPaperViewController.swift in Sources */,
 				1D5AB6B126C2A67100B62D5A /* ExamSelectionTableViewCell.swift in Sources */,
 				0B16EA4F26C3D50900DC1C91 /* SettingsViewController.swift in Sources */,
+				0B6F5D9B26CBEFB6006586D4 /* HapticSettingCell.swift in Sources */,
 				0B32AA7126C52E3100E0E404 /* Constants.swift in Sources */,
 				1D6BE99F26C2EC9E00F44114 /* PaperPreviewViewController.swift in Sources */,
 				1D6BE99526C2BA4A00F44114 /* SubjectsTableViewCell.swift in Sources */,

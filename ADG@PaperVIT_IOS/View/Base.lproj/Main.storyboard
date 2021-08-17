@@ -155,11 +155,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageIcon" destination="6y4-zc-SjA" id="eMq-yc-IJq"/>
-                                            <outlet property="settingNameLabel" destination="iBi-2p-FOw" id="m9w-Al-tfX"/>
+                                            <outlet property="imageIcon" destination="6y4-zc-SjA" id="uGY-MH-P9j"/>
+                                            <outlet property="settingNameLabel" destination="iBi-2p-FOw" id="iiF-Bl-84K"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" rowHeight="60" id="QNe-s0-yWH" customClass="settingsCell" customModule="ADG_PaperVIT_IOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" rowHeight="60" id="QNe-s0-yWH" customClass="HapticSettingCell" customModule="ADG_PaperVIT_IOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="84.333333969116211" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QNe-s0-yWH" id="FTM-vO-MB0">
@@ -182,7 +182,7 @@
                                                     <rect key="frame" x="295" y="17" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.32941177490000001" green="0.18823529780000001" blue="0.84705877299999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <connections>
-                                                        <action selector="toggleSwitch:" destination="QNe-s0-yWH" eventType="valueChanged" id="NOg-9w-uwV"/>
+                                                        <action selector="toggleSwitch:" destination="QNe-s0-yWH" eventType="valueChanged" id="C67-OM-2cX"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -199,9 +199,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="hapticToggle" destination="18d-mv-CXW" id="y28-si-8HI"/>
-                                            <outlet property="imageIcon" destination="fgO-Uw-i0v" id="Ry1-c5-fYh"/>
-                                            <outlet property="settingNameLabel" destination="w4M-gU-dRI" id="2Qb-gj-n37"/>
+                                            <outlet property="hapticToggle" destination="18d-mv-CXW" id="RKC-ZZ-sVK"/>
+                                            <outlet property="imageIcon" destination="fgO-Uw-i0v" id="fXI-Mv-pQb"/>
+                                            <outlet property="settingNameLabel" destination="w4M-gU-dRI" id="laN-k0-398"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -229,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjB-CO-VCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3356" y="-706"/>
+            <point key="canvasLocation" x="3356" y="-706.4039408866995"/>
         </scene>
         <!--Privacy-->
         <scene sceneID="SqA-5y-SQ3">

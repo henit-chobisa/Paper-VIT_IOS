@@ -70,6 +70,7 @@ extension ExamsViewController : UITableViewDelegate {
     
 }
 
+//MARK: - Haptic for Upload Button
 
 extension ExamsViewController {
     func settingHapticStateValue() {
