@@ -56,7 +56,7 @@ extension SubjectExpandedViewController : UICollectionViewDataSource{
         let cell = papersCollectionView.dequeueReusableCell(withReuseIdentifier: "paperCell", for: indexPath) as! PaperThumbnailCollectionViewCell
         cell.paperTitle.text = papers[indexPath.row].title
         cell.slotTitle.text = papers[indexPath.row].slot
-        cell.paperThumbnail.image = papers[indexPath.row].thumbnail
+        
         return cell
     }
 }

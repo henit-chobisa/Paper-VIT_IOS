@@ -20,13 +20,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ul8-Lh-eSu">
                         <rect key="frame" x="0.0" y="0.0" width="185" height="230"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2021-03-22 at 5.28 1" translatesAutoresizingMaskIntoConstraints="NO" id="Qch-cc-bcJ">
-                                <rect key="frame" x="0.0" y="0.0" width="185" height="176"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="176" id="OAH-ts-str"/>
-                                    <constraint firstAttribute="width" constant="185" id="scK-F3-uud"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBv-Hk-rUD">
                                 <rect key="frame" x="0.0" y="176" width="185" height="52"/>
                                 <subviews>
@@ -61,14 +54,26 @@
                                     <constraint firstAttribute="height" constant="52" id="tn0-Fj-XUn"/>
                                 </constraints>
                             </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTs-09-IGa">
+                                <rect key="frame" x="0.0" y="0.0" width="185" height="176"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="z9Z-XP-Qfe"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vBv-Hk-rUD" firstAttribute="top" secondItem="Qch-cc-bcJ" secondAttribute="bottom" id="Clk-QR-FbU"/>
-                            <constraint firstItem="Qch-cc-bcJ" firstAttribute="leading" secondItem="ul8-Lh-eSu" secondAttribute="leading" id="DaY-NA-JcC"/>
+                            <constraint firstItem="vBv-Hk-rUD" firstAttribute="top" secondItem="aTs-09-IGa" secondAttribute="bottom" id="BTh-N2-JTZ"/>
                             <constraint firstAttribute="trailing" secondItem="vBv-Hk-rUD" secondAttribute="trailing" id="MUh-yI-76Y"/>
+                            <constraint firstItem="aTs-09-IGa" firstAttribute="leading" secondItem="ul8-Lh-eSu" secondAttribute="leading" id="Np6-k7-U2e"/>
                             <constraint firstItem="vBv-Hk-rUD" firstAttribute="leading" secondItem="ul8-Lh-eSu" secondAttribute="leading" id="TJP-2b-z4d"/>
-                            <constraint firstItem="Qch-cc-bcJ" firstAttribute="top" secondItem="ul8-Lh-eSu" secondAttribute="top" id="rYn-Ld-94O"/>
+                            <constraint firstItem="aTs-09-IGa" firstAttribute="top" secondItem="ul8-Lh-eSu" secondAttribute="top" id="UTb-BB-qZ9"/>
+                            <constraint firstAttribute="trailing" secondItem="aTs-09-IGa" secondAttribute="trailing" id="bb6-uU-zYc"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -82,16 +87,15 @@
             </constraints>
             <connections>
                 <outlet property="baseView" destination="ul8-Lh-eSu" id="cjY-JV-zQE"/>
-                <outlet property="paperThumbnail" destination="Qch-cc-bcJ" id="cU9-nk-cWU"/>
                 <outlet property="paperTitle" destination="6sd-CI-kLj" id="WzL-Yp-y1l"/>
                 <outlet property="slotTitle" destination="nEK-Lq-GzV" id="76Z-G9-AlA"/>
                 <outlet property="titleView" destination="vBv-Hk-rUD" id="Haf-fz-IkQ"/>
+                <outlet property="webViewOutlet" destination="aTs-09-IGa" id="iqm-fv-tni"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="83.705357142857139"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Screenshot 2021-03-22 at 5.28 1" width="164" height="209"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
