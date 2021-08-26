@@ -130,6 +130,7 @@
 		1D5AB69326C2958400B62D5A /* ADG@PaperVIT_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				1DE89E6F26D829FC00F6AC67 /* Routes */,
 				0B32AA7426C54A3300E0E404 /* Models */,
 				1D5AB6A826C29E1800B62D5A /* View Controllers */,
 				1D5AB69426C2958400B62D5A /* AppDelegate.swift */,
@@ -195,6 +196,13 @@
 				1D6BE99B26C2E33C00F44114 /* PaperThumbnailCollectionViewCell.xib */,
 			);
 			path = SubjectExpandedViewController;
+			sourceTree = "<group>";
+		};
+		1DE89E6F26D829FC00F6AC67 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

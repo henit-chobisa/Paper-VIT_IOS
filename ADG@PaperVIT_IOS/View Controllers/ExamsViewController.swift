@@ -12,6 +12,7 @@ class ExamsViewController: UIViewController {
     @IBOutlet weak var examTableView: UITableView!
     @IBOutlet weak var uploadPaperButton: UIButton!
     let defaults = UserDefaults.standard
+    let subject = Subject()
     
     struct Exam {
         var ExamTitle : String
@@ -30,12 +31,18 @@ class ExamsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            print("executing subjects")
+            self.subject.getAllSubject()
+        }
         examTableView.dataSource = self
         examTableView.delegate = self
         settingHapticStateValue()
 
         // Do any additional setup after loading the view.
     }
+    
     
 
     @IBAction func didTapUploadPaper(_ sender: Any) {
