@@ -11,7 +11,6 @@ struct subjectDetail:Codable{
     let shortName:String
     let subjectName:String
     let subjectCode:String
-    let examType:Int
     let createdAt:String
     let updatedAt:String
 }
@@ -30,9 +29,9 @@ class Subject {
     
     func getAllSubject(){
         let url = URL(string: "https://adg-papervit.herokuapp.com/api/v1/subjects/0?skip=0&limit=5'")
+        var subjectData : SubjectModel? = nil
         URLSession.shared.dataTask(with: url!){(data, response, error) in
             guard let data = data, error == nil, response != nil else {
-                
                 print(error!.localizedDescription)
                 return
             }
@@ -40,10 +39,11 @@ class Subject {
                 let decoder = JSONDecoder()
                 print(String(data: data, encoding: .utf8)!)
                 let response = try decoder.decode(SubjectModel.self, from: data)
-                
+                subjectData = response
             }
             catch{
-                print(error.localizedDescription)
+                print(error)
+                return
             }
         }.resume()
     }
