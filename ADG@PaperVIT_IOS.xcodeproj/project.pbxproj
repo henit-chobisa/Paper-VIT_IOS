@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B16EA4F26C3D50900DC1C91 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16EA4E26C3D50900DC1C91 /* SettingsViewController.swift */; };
+		0B16EA5626C3D6AD00DC1C91 /* settingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16EA5526C3D6AD00DC1C91 /* settingsCell.swift */; };
 		1D5AB69526C2958400B62D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AB69426C2958400B62D5A /* AppDelegate.swift */; };
 		1D5AB69726C2958400B62D5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AB69626C2958400B62D5A /* SceneDelegate.swift */; };
 		1D5AB69926C2958400B62D5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AB69826C2958400B62D5A /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B16EA4E26C3D50900DC1C91 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0B16EA5526C3D6AD00DC1C91 /* settingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsCell.swift; sourceTree = "<group>"; };
 		1D5AB69126C2958400B62D5A /* ADG@PaperVIT_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADG@PaperVIT_IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5AB69426C2958400B62D5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D5AB69626C2958400B62D5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B16EA5026C3D64000DC1C91 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0B16EA5526C3D6AD00DC1C91 /* settingsCell.swift */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		0B16EA5726C3E13E00DC1C91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D5AB69A26C2958400B62D5A /* Main.storyboard */,
+				1D5AB69D26C2958600B62D5A /* Assets.xcassets */,
+				1D5AB69F26C2958600B62D5A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1D5AB68826C2958400B62D5A = {
 			isa = PBXGroup;
 			children = (
@@ -89,9 +111,7 @@
 				1D6BE9A026C2F0E500F44114 /* CircularProgressView.swift */,
 				1D5AB69626C2958400B62D5A /* SceneDelegate.swift */,
 				1D5AB69826C2958400B62D5A /* ViewController.swift */,
-				1D5AB69A26C2958400B62D5A /* Main.storyboard */,
-				1D5AB69D26C2958600B62D5A /* Assets.xcassets */,
-				1D5AB69F26C2958600B62D5A /* LaunchScreen.storyboard */,
+				0B16EA5726C3E13E00DC1C91 /* View */,
 				1D5AB6A226C2958600B62D5A /* Info.plist */,
 			);
 			path = "ADG@PaperVIT_IOS";
@@ -108,6 +128,7 @@
 				1D6BE99E26C2EC9E00F44114 /* PaperPreviewViewController.swift */,
 				1D6BE9A226C2F16C00F44114 /* UploadPaperViewController.swift */,
 				1D6BE9A426C2F3CA00F44114 /* paperSelectionViewController.swift */,
+				0B16EA4E26C3D50900DC1C91 /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -115,6 +136,7 @@
 		1D5AB6AD26C2A63B00B62D5A /* Nibs for Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0B16EA5026C3D64000DC1C91 /* SettingsViewController */,
 				1D6BE99926C2E2F500F44114 /* SubjectExpandedViewController */,
 				1D6BE99026C2B9FE00F44114 /* SubjectsViewController */,
 				1D5AB6AE26C2A64A00B62D5A /* ExamViewController */,
@@ -230,11 +252,13 @@
 				1D6BE99C26C2E33C00F44114 /* PaperThumbnailCollectionViewCell.swift in Sources */,
 				1D6BE9A326C2F16C00F44114 /* UploadPaperViewController.swift in Sources */,
 				1D5AB6B126C2A67100B62D5A /* ExamSelectionTableViewCell.swift in Sources */,
+				0B16EA4F26C3D50900DC1C91 /* SettingsViewController.swift in Sources */,
 				1D6BE99F26C2EC9E00F44114 /* PaperPreviewViewController.swift in Sources */,
 				1D6BE99526C2BA4A00F44114 /* SubjectsTableViewCell.swift in Sources */,
 				1D5AB69726C2958400B62D5A /* SceneDelegate.swift in Sources */,
 				1D5AB6AA26C29E6000B62D5A /* OnBoardingViewController.swift in Sources */,
 				1D6BE9A126C2F0E500F44114 /* CircularProgressView.swift in Sources */,
+				0B16EA5626C3D6AD00DC1C91 /* settingsCell.swift in Sources */,
 				1D5AB6AC26C2A4EA00B62D5A /* ExamsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
