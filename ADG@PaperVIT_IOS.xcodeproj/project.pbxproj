@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0B16EA4F26C3D50900DC1C91 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16EA4E26C3D50900DC1C91 /* SettingsViewController.swift */; };
 		0B16EA5626C3D6AD00DC1C91 /* settingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16EA5526C3D6AD00DC1C91 /* settingsCell.swift */; };
+		0B32AA6F26C52E1600E0E404 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B32AA6E26C52E1600E0E404 /* HapticFeedback.swift */; };
+		0B32AA7126C52E3100E0E404 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B32AA7026C52E3100E0E404 /* Constants.swift */; };
+		0B32AA7326C546FB00E0E404 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B32AA7226C546FB00E0E404 /* PrivacyViewController.swift */; };
+		0B6F5D9B26CBEFB6006586D4 /* HapticSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F5D9A26CBEFB6006586D4 /* HapticSettingCell.swift */; };
 		1D5AB69526C2958400B62D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AB69426C2958400B62D5A /* AppDelegate.swift */; };
 		1D5AB69726C2958400B62D5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AB69626C2958400B62D5A /* SceneDelegate.swift */; };
 		1D5AB69926C2958400B62D5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AB69826C2958400B62D5A /* ViewController.swift */; };
@@ -34,6 +38,10 @@
 /* Begin PBXFileReference section */
 		0B16EA4E26C3D50900DC1C91 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0B16EA5526C3D6AD00DC1C91 /* settingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsCell.swift; sourceTree = "<group>"; };
+		0B32AA6E26C52E1600E0E404 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		0B32AA7026C52E3100E0E404 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0B32AA7226C546FB00E0E404 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		0B6F5D9A26CBEFB6006586D4 /* HapticSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticSettingCell.swift; sourceTree = "<group>"; };
 		1D5AB69126C2958400B62D5A /* ADG@PaperVIT_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADG@PaperVIT_IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5AB69426C2958400B62D5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D5AB69626C2958400B62D5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				0B16EA5526C3D6AD00DC1C91 /* settingsCell.swift */,
+				0B6F5D9A26CBEFB6006586D4 /* HapticSettingCell.swift */,
 			);
 			path = SettingsViewController;
 			sourceTree = "<group>";
@@ -85,6 +94,15 @@
 				1D5AB69F26C2958600B62D5A /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0B32AA7426C54A3300E0E404 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B32AA6E26C52E1600E0E404 /* HapticFeedback.swift */,
+				0B32AA7026C52E3100E0E404 /* Constants.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1D5AB68826C2958400B62D5A = {
@@ -106,6 +124,7 @@
 		1D5AB69326C2958400B62D5A /* ADG@PaperVIT_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				0B32AA7426C54A3300E0E404 /* Models */,
 				1D5AB6A826C29E1800B62D5A /* View Controllers */,
 				1D5AB69426C2958400B62D5A /* AppDelegate.swift */,
 				1D6BE9A026C2F0E500F44114 /* CircularProgressView.swift */,
@@ -129,6 +148,7 @@
 				1D6BE9A226C2F16C00F44114 /* UploadPaperViewController.swift */,
 				1D6BE9A426C2F3CA00F44114 /* paperSelectionViewController.swift */,
 				0B16EA4E26C3D50900DC1C91 /* SettingsViewController.swift */,
+				0B32AA7226C546FB00E0E404 /* PrivacyViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -253,13 +273,17 @@
 				1D6BE9A326C2F16C00F44114 /* UploadPaperViewController.swift in Sources */,
 				1D5AB6B126C2A67100B62D5A /* ExamSelectionTableViewCell.swift in Sources */,
 				0B16EA4F26C3D50900DC1C91 /* SettingsViewController.swift in Sources */,
+				0B6F5D9B26CBEFB6006586D4 /* HapticSettingCell.swift in Sources */,
+				0B32AA7126C52E3100E0E404 /* Constants.swift in Sources */,
 				1D6BE99F26C2EC9E00F44114 /* PaperPreviewViewController.swift in Sources */,
 				1D6BE99526C2BA4A00F44114 /* SubjectsTableViewCell.swift in Sources */,
+				0B32AA7326C546FB00E0E404 /* PrivacyViewController.swift in Sources */,
 				1D5AB69726C2958400B62D5A /* SceneDelegate.swift in Sources */,
 				1D5AB6AA26C29E6000B62D5A /* OnBoardingViewController.swift in Sources */,
 				1D6BE9A126C2F0E500F44114 /* CircularProgressView.swift in Sources */,
 				0B16EA5626C3D6AD00DC1C91 /* settingsCell.swift in Sources */,
 				1D5AB6AC26C2A4EA00B62D5A /* ExamsViewController.swift in Sources */,
+				0B32AA6F26C52E1600E0E404 /* HapticFeedback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,13 +431,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LTT23YW2Z9;
+				DEVELOPMENT_TEAM = 92767LDVUF;
 				INFOPLIST_FILE = "ADG@PaperVIT_IOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.henit-chobisa.ADG-PaperVIT-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vaibhavshah.ADG-PaperVIT-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -426,13 +450,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LTT23YW2Z9;
+				DEVELOPMENT_TEAM = 92767LDVUF;
 				INFOPLIST_FILE = "ADG@PaperVIT_IOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.henit-chobisa.ADG-PaperVIT-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vaibhavshah.ADG-PaperVIT-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

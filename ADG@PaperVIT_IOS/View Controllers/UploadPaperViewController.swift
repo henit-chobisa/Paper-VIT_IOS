@@ -11,6 +11,9 @@ class UploadPaperViewController: UIViewController {
 
     @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var progressViewIndicator: CircularProgressView!
+    
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         progressViewIndicator.outterCircleWidth = 36.5
@@ -18,12 +21,14 @@ class UploadPaperViewController: UIViewController {
         progressViewIndicator.progressCircleColour = #colorLiteral(red: 0.2549019608, green: 0.05882352941, blue: 0.8078431373, alpha: 1)
         progressViewIndicator.fillCircleColour = #colorLiteral(red: 0.5766911507, green: 0.6609275937, blue: 1, alpha: 1)
         uploadButton.layer.cornerRadius = 20
+        settingHapticStateValue()
         
         // Do any additional setup after loading the view.
     }
     
     @IBAction func didTapUploadPdf(_ sender: Any) {
         progressViewIndicator.progressAnimation(duration: 10, value: 1)
+        hapticFeedback.hapticTouch.haptiFeedbackSucess()
     }
     
     /*
@@ -36,4 +41,14 @@ class UploadPaperViewController: UIViewController {
     }
     */
 
+}
+
+//MARK: - Haptic for Upload Button
+
+extension UploadPaperViewController {
+    func settingHapticStateValue() {
+        if defaults.object(forKey: key.values.hapticState) == nil {
+            defaults.setValue(false, forKey: key.values.hapticState)
+        }
+    }
 }
