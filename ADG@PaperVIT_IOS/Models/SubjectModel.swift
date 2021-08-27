@@ -27,25 +27,39 @@ struct metaData : Codable {
 
 class Subject {
     
-    func getAllSubject(){
+    let group = DispatchGroup()
+    
+    private func getAllSubject(){
         let url = URL(string: "https://adg-papervit.herokuapp.com/api/v1/subjects/0?skip=0&limit=5'")
-        var subjectData : SubjectModel? = nil
+        var allSubjects : SubjectModel? = nil
+        var alldata : Data? = nil
+        group.enter()
         URLSession.shared.dataTask(with: url!){(data, response, error) in
             guard let data = data, error == nil, response != nil else {
                 print(error!.localizedDescription)
                 return
             }
-            do {
-                let decoder = JSONDecoder()
-                print(String(data: data, encoding: .utf8)!)
-                let response = try decoder.decode(SubjectModel.self, from: data)
-                subjectData = response
-            }
-            catch{
-                print(error)
-                return
-            }
+            alldata = data
+            self.group.leave()
         }.resume()
+        
+        group.notify(queue: .main){
+            allSubjects = self.parseJSON(data: alldata!)
+        }
+        
+        
+    }
+    func parseJSON(data : Data) -> SubjectModel?{
+        let decoder = JSONDecoder()
+        do {
+            print(String(data: data, encoding: .utf8)!)
+            let response = try decoder.decode(SubjectModel.self, from: data)
+            return response
+        }
+        catch{
+            print(error)
+            return nil
+        }
     }
 }
 

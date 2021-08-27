@@ -10,7 +10,7 @@ import WebKit
 
 class PaperThumbnailCollectionViewCell: UICollectionViewCell {
 
-    var urlString : String = "https://www.google.com"
+    var urlString : String = "https://storage.googleapis.com/papervit-upload.appspot.com/2f61c10ddf35773652a69d03b7269d8539abaa50.pdf"
     @IBOutlet weak var webViewOutlet: WKWebView!
     @IBOutlet weak var paperTitle: UILabel!
     @IBOutlet weak var slotTitle: UILabel!

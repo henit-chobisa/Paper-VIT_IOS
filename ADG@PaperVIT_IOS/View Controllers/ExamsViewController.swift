@@ -12,7 +12,8 @@ class ExamsViewController: UIViewController {
     @IBOutlet weak var examTableView: UITableView!
     @IBOutlet weak var uploadPaperButton: UIButton!
     let defaults = UserDefaults.standard
-    let subject = Subject()
+    var allSubjectData : SubjectModel? = nil
+    let group = DispatchGroup()
     
     struct Exam {
         var ExamTitle : String
@@ -21,6 +22,7 @@ class ExamsViewController: UIViewController {
     
     let exams : [Exam] = [Exam(ExamTitle: "CAT 1", ExamSubtitle: "Continuous Assessment Test 1"), Exam(ExamTitle: "CAT 2", ExamSubtitle: "Continuous Assessment Test 2"),Exam(ExamTitle: "FAT", ExamSubtitle: "Final Assessment Test")]
     
+
     override func viewWillAppear(_ animated: Bool) {
         uploadPaperButton.layer.cornerRadius = 10
         uploadPaperButton.layer.borderWidth = 2
@@ -31,15 +33,10 @@ class ExamsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            print("executing subjects")
-            self.subject.getAllSubject()
-        }
+    
         examTableView.dataSource = self
         examTableView.delegate = self
         settingHapticStateValue()
-
         // Do any additional setup after loading the view.
     }
     
