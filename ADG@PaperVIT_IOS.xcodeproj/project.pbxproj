@@ -33,11 +33,13 @@
 		1D6BE9A126C2F0E500F44114 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6BE9A026C2F0E500F44114 /* CircularProgressView.swift */; };
 		1D6BE9A326C2F16C00F44114 /* UploadPaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6BE9A226C2F16C00F44114 /* UploadPaperViewController.swift */; };
 		1D6BE9A526C2F3CA00F44114 /* paperSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6BE9A426C2F3CA00F44114 /* paperSelectionViewController.swift */; };
+		4DAFFBEF72D1CBD9008D6789 /* Pods_ADG_PaperVIT_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92805759585573B7E2307AF6 /* Pods_ADG_PaperVIT_IOS.framework */; };
 		B257BD6326D81EF800B4788B /* PaperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257BD6226D81EF800B4788B /* PaperModel.swift */; };
 		B257BD6526D81F8D00B4788B /* SubjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257BD6426D81F8D00B4788B /* SubjectModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		049E710EF7CF93C89C834C2E /* Pods-ADG@PaperVIT_IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADG@PaperVIT_IOS.debug.xcconfig"; path = "Target Support Files/Pods-ADG@PaperVIT_IOS/Pods-ADG@PaperVIT_IOS.debug.xcconfig"; sourceTree = "<group>"; };
 		0B16EA4E26C3D50900DC1C91 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0B16EA5526C3D6AD00DC1C91 /* settingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsCell.swift; sourceTree = "<group>"; };
 		0B32AA6E26C52E1600E0E404 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		1D6BE9A026C2F0E500F44114 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		1D6BE9A226C2F16C00F44114 /* UploadPaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPaperViewController.swift; sourceTree = "<group>"; };
 		1D6BE9A426C2F3CA00F44114 /* paperSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paperSelectionViewController.swift; sourceTree = "<group>"; };
+		92805759585573B7E2307AF6 /* Pods_ADG_PaperVIT_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADG_PaperVIT_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		966905220033EB8F6F45ABE5 /* Pods-ADG@PaperVIT_IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADG@PaperVIT_IOS.release.xcconfig"; path = "Target Support Files/Pods-ADG@PaperVIT_IOS/Pods-ADG@PaperVIT_IOS.release.xcconfig"; sourceTree = "<group>"; };
 		B257BD6226D81EF800B4788B /* PaperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperModel.swift; sourceTree = "<group>"; };
 		B257BD6426D81F8D00B4788B /* SubjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,12 +79,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DAFFBEF72D1CBD9008D6789 /* Pods_ADG_PaperVIT_IOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		017F0BB6461F754A978F4F9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92805759585573B7E2307AF6 /* Pods_ADG_PaperVIT_IOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0B16EA5026C3D64000DC1C91 /* SettingsViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +129,8 @@
 			children = (
 				1D5AB69326C2958400B62D5A /* ADG@PaperVIT_IOS */,
 				1D5AB69226C2958400B62D5A /* Products */,
+				52210AFA300BF5444E8731DF /* Pods */,
+				017F0BB6461F754A978F4F9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +220,16 @@
 			path = Routes;
 			sourceTree = "<group>";
 		};
+		52210AFA300BF5444E8731DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				049E710EF7CF93C89C834C2E /* Pods-ADG@PaperVIT_IOS.debug.xcconfig */,
+				966905220033EB8F6F45ABE5 /* Pods-ADG@PaperVIT_IOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D5AB6A526C2958600B62D5A /* Build configuration list for PBXNativeTarget "ADG@PaperVIT_IOS" */;
 			buildPhases = (
+				805982F26BF8E23ECDFCE3F2 /* [CP] Check Pods Manifest.lock */,
 				1D5AB68D26C2958400B62D5A /* Sources */,
 				1D5AB68E26C2958400B62D5A /* Frameworks */,
 				1D5AB68F26C2958400B62D5A /* Resources */,
+				4C81AB1A8B99BC38E1202468 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,6 +299,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C81AB1A8B99BC38E1202468 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ADG@PaperVIT_IOS/Pods-ADG@PaperVIT_IOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ADG@PaperVIT_IOS/Pods-ADG@PaperVIT_IOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ADG@PaperVIT_IOS/Pods-ADG@PaperVIT_IOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		805982F26BF8E23ECDFCE3F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ADG@PaperVIT_IOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D5AB68D26C2958400B62D5A /* Sources */ = {
@@ -443,6 +512,7 @@
 		};
 		1D5AB6A626C2958600B62D5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 049E710EF7CF93C89C834C2E /* Pods-ADG@PaperVIT_IOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +532,7 @@
 		};
 		1D5AB6A726C2958600B62D5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 966905220033EB8F6F45ABE5 /* Pods-ADG@PaperVIT_IOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

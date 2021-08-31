@@ -12,7 +12,7 @@ class SubjectsViewController: UIViewController {
     @IBOutlet weak var subjectTableView: UITableView!
     @IBOutlet weak var subjectSearch: UISearchBar!
     
-    let SectionTitles = ["Favourites", "All Subjects"]
+    let SectionTitles = ["All Subjects"]
     
     struct subject {
         var courseShortLabel : String
@@ -83,7 +83,7 @@ class SubjectsViewController: UIViewController {
 
 extension SubjectsViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-        2
+        1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Subjects.count
@@ -101,7 +101,7 @@ extension SubjectsViewController : UITableViewDataSource {
 
 extension SubjectsViewController : UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        1
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return SectionTitles[section]

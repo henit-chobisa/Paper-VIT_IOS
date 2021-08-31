@@ -638,7 +638,7 @@
                                 <rect key="frame" x="16" y="661" width="343" height="60"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.058823529409999999" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Yl7-V9-VcB"/>
+                                    <constraint firstAttribute="height" constant="60" id="Or9-DA-dFx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="18"/>
                                 <state key="normal" title="Download PDF">
@@ -649,32 +649,35 @@
                                     <action selector="didTapGetStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SXV-ed-muD"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2021-03-22 at 5.28 1" translatesAutoresizingMaskIntoConstraints="NO" id="6zI-Zp-7B0">
-                                <rect key="frame" x="16" y="193" width="343" height="434"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="434" id="nuH-NM-fWi"/>
-                                </constraints>
-                            </imageView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnR-Hs-aQ8">
+                                <rect key="frame" x="16" y="176" width="343" height="477"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QNt-MC-F1d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zYg-nZ-BZ3" firstAttribute="leading" secondItem="QNt-MC-F1d" secondAttribute="leading" constant="16" id="HdY-xX-vYw"/>
-                            <constraint firstItem="zYg-nZ-BZ3" firstAttribute="top" secondItem="6zI-Zp-7B0" secondAttribute="bottom" constant="34" id="OUf-Gk-DR1"/>
+                            <constraint firstItem="nnR-Hs-aQ8" firstAttribute="leading" secondItem="QNt-MC-F1d" secondAttribute="leading" constant="16" id="GLd-aR-ZNd"/>
+                            <constraint firstItem="nnR-Hs-aQ8" firstAttribute="top" secondItem="sP8-BN-t7a" secondAttribute="bottom" constant="8" id="Ha2-Jp-VyT"/>
                             <constraint firstItem="sP8-BN-t7a" firstAttribute="top" secondItem="QNt-MC-F1d" secondAttribute="top" constant="7" id="S4g-Lj-wOS"/>
+                            <constraint firstItem="QNt-MC-F1d" firstAttribute="bottom" secondItem="zYg-nZ-BZ3" secondAttribute="bottom" constant="57" id="Uli-QG-Jrc"/>
                             <constraint firstItem="QNt-MC-F1d" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sP8-BN-t7a" secondAttribute="trailing" symbolic="YES" id="alK-ts-ec9"/>
-                            <constraint firstItem="6zI-Zp-7B0" firstAttribute="top" secondItem="sP8-BN-t7a" secondAttribute="bottom" constant="25" id="hBZ-i8-RgX"/>
+                            <constraint firstItem="zYg-nZ-BZ3" firstAttribute="leading" secondItem="QNt-MC-F1d" secondAttribute="leading" constant="16" id="bzj-o9-hgN"/>
+                            <constraint firstItem="zYg-nZ-BZ3" firstAttribute="top" secondItem="nnR-Hs-aQ8" secondAttribute="bottom" constant="8" id="gre-QN-btP"/>
+                            <constraint firstItem="QNt-MC-F1d" firstAttribute="trailing" secondItem="zYg-nZ-BZ3" secondAttribute="trailing" constant="16" id="ivJ-cm-mah"/>
                             <constraint firstItem="sP8-BN-t7a" firstAttribute="leading" secondItem="QNt-MC-F1d" secondAttribute="leading" constant="16" id="qYc-ew-AZd"/>
-                            <constraint firstItem="QNt-MC-F1d" firstAttribute="trailing" secondItem="6zI-Zp-7B0" secondAttribute="trailing" constant="16" id="qav-6c-Xj6"/>
-                            <constraint firstItem="QNt-MC-F1d" firstAttribute="trailing" secondItem="zYg-nZ-BZ3" secondAttribute="trailing" constant="16" id="tlV-Pq-vje"/>
-                            <constraint firstItem="6zI-Zp-7B0" firstAttribute="leading" secondItem="QNt-MC-F1d" secondAttribute="leading" constant="16" id="zfQ-0Y-F2P"/>
+                            <constraint firstItem="QNt-MC-F1d" firstAttribute="trailing" secondItem="nnR-Hs-aQ8" secondAttribute="trailing" constant="16" id="yuc-Kd-xHu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JCk-E0-u8I"/>
                     <connections>
                         <outlet property="downloadButton" destination="zYg-nZ-BZ3" id="rWv-tZ-0IZ"/>
-                        <outlet property="paperPreviewDummyImage" destination="6zI-Zp-7B0" id="w1z-e8-RZr"/>
                         <outlet property="paperSlotLable" destination="sP8-BN-t7a" id="XqB-ic-s7Q"/>
+                        <outlet property="pdfWebView" destination="nnR-Hs-aQ8" id="r1Z-5c-IuB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4IA-le-otg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -705,7 +708,6 @@
     </scenes>
     <resources>
         <image name="17 5" width="148" height="148"/>
-        <image name="Screenshot 2021-03-22 at 5.28 1" width="164" height="209"/>
         <image name="SettingsIcon" width="20" height="20"/>
         <image name="Upload Button" width="292" height="292"/>
         <image name="fileThumbnail" width="33" height="40"/>
